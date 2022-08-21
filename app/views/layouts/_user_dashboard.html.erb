@@ -1,0 +1,24 @@
+ <% if current_user?(user) %>
+
+<div class="mb-4 border-b border-gray-200 ">
+  <ul
+    class="flex flex-row -mb-px text-sm md:font-medium text-xs text-center "
+    id="myTab"
+    data-tabs-toggle="#myTabContent"
+    role="tablist"
+  >
+    <li class="mr-2" role="presentation">
+      <%= link_to "Recent Activity", user_path(user), class:"inline-block p-4 rounded-t-lg border-b-2 border-transparent  text-gray-500 border-gray-100 #{ selectHistory && "border-happy-orange border-b-2 text-happy-orange"}" %>
+    </li>
+
+    <li class="mr-2" role="presentation">
+      <%= link_to "Saved Products", user_favourites_path(user), class:"inline-block p-4 rounded-t-lg border-b-2 border-transparent text-gray-500 border-gray-100 #{ selectFavs && "border-happy-orange border-b-2 text-happy-orange"}" %>
+    </li>
+
+    <li class="mr-2" role="presentation">
+      <%= link_to "Edit Account", edit_user_path(user), method: "get", class:"inline-block p-4 rounded-t-lg border-b-2 border-transparent text-gray-500 border-gray-100 #{ selectSettings && "border-happy-orange border-b-2 text-happy-orange"}" %>
+    </li>
+  </ul>
+</div>
+      
+  <% end %> 

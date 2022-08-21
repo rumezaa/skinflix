@@ -1,0 +1,8 @@
+<%= render "dashboard"%>
+
+  
+<%= render "layouts/user_dashboard", user: @user, selectFavs: false, selectHistory: false, selectSettings: true %>
+
+<div class="flex flex-col items-center lg:flex-row gap-20 lg:items-left px-20">
+<%= render "form", user: @user, form_length:"w-64 md:w-11/12 lg:w-3/5 xl:w-2/5" %>
+</div>

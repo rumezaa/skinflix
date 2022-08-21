@@ -1,0 +1,5 @@
+<%= render "main", product: @product, image: @image, favourite: @favourite, tags: @tags%>
+
+<% if current_user_admin? %>
+<%= react_component("admin/AdminButton", {url: edit_product_path(@product), type: "edit"}) %>
+<% end %>

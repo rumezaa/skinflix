@@ -1,0 +1,4 @@
+<div class="pt-5 px-10">
+  <%= link_to "Back to #{@product.name}", product_path(@product), class:"text-2xl" %>
+</div>
+<%= react_component("pages/ReviewsPage", {reviews: @reviews, product: @product, admin: current_user_admin? }) %>

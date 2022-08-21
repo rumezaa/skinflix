@@ -1,0 +1,5 @@
+<%= render "layouts/main" %>
+
+<% if current_user_admin? %>
+  <%= react_component("admin/AdminButton", {url: new_product_path, type: "add"}) %>
+<% end %>

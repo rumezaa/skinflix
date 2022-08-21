@@ -1,0 +1,8 @@
+
+
+
+<%= render "dashboard"%>
+<%= render "layouts/user_dashboard", user: @user, selectFavs: false, selectHistory: true, selectSettings: false %>
+<% if current_user?(@user) %>
+<%= react_component("user_dashboard/UserActivity", {reviews: @reviews, products:@products} ) %>
+<%end%>

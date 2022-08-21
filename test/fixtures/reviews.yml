@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  username: MyString
+  comment: MyText
+  stars: 9.99
+  product: one
+  user: one
+
+two:
+  username: MyString
+  comment: MyText
+  stars: 9.99
+  product: two
+  user: two
